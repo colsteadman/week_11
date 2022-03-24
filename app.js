@@ -1,7 +1,5 @@
 
 total = 0
-
-
 function main() {
     name()
     do{
@@ -17,9 +15,6 @@ function main() {
         var again = prompt("do you want to play again? (y) for yes (n) for no")
     }while(again == "y")
 }
-
-
-
 
 function name() {
     var name = prompt("what is your name?")
@@ -37,12 +32,13 @@ function name() {
      alert("now its your turn")
      do{
         user_s = user_s + random()
+        if (user_s > 20) {
+            break
+        }
         var question = prompt(`your score is ${user_s}. do you want to roll again? (y) for yes (n) for no`)
-     }while(question == "y")
+     }while(question == "y") 
      return user_s
  }
-
-
 
 function computer() {
     alert("first the computers score")
@@ -56,8 +52,6 @@ function computer() {
     }while(comp_s < 16)
     return comp_s
 }
-
-
 
 function compare() {
     if (comp_s > 20) {
@@ -74,11 +68,5 @@ function compare() {
     
 }
 
-
-
-
 main()
-
-
-
 alert(`your total wins are ${total}`)
